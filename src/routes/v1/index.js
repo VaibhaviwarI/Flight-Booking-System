@@ -1,15 +1,13 @@
-const express = require('express')
 
-const {InfoController} = require('../../controllers')
+
+const express = require('express')
 
 const router = express.Router();
 
-const app = express();
-
-
-
-router.get('/info', InfoController.info)
-
-
+router.get('/info',(req,res)=>{
+    return res.json({
+        msg: "Coming from v1 api"
+    })
+})
 
 module.exports = router;
