@@ -2,12 +2,14 @@
 
 const express = require('express')
 
+const airplaneRoutes = require('./airplane-routes')
+
 const router = express.Router();
 
-router.get('/info',(req,res)=>{
-    return res.json({
-        msg: "Coming from v1 api"
-    })
-})
+router.use('/airplanes', apiRoutes);
+
+
+
+
 
 module.exports = router;

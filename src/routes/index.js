@@ -8,12 +8,7 @@ const router = express.Router();
 const app = express();
 
 
-router.use('/v1',v1Routes)
-
-
-
-
-
+router.use('/v1',v1Routes);
 
 
 

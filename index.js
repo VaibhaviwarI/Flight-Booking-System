@@ -4,10 +4,20 @@ const express = require('express')
 
 const { Logger} = require('./src/config')
 
+const apiRoutes = require('./src/routes')
+
+
 
 const app = express();
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
+
 
 const PORT = process.env.PORT
+
+router.use('/v1',  apiRoutes );
+
 
 
 
